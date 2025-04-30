@@ -1,3 +1,2 @@
-//export const API ="https://mk-bulk-email.herokuapp.com";
 
-export const API = `http://localhost:5000`;
+export const API = `https://bulkemail-backend-isfw.onrender.com`;
