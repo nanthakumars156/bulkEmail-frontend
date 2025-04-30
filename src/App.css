@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+html{
+  height: 100%;
+}
+
+.font-link{
+  font-family: 'Roboto', sans-serif;
+}
+
+.mailForm{
+  margin-top:10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:12px;
+  
+}
+.emailBox{
+  /* margin: inherit; */
+  display: inherit;
+  justify-content: space-evenly;
+  padding-left: 6px;
+  align-items: center;
+  flex-direction: row;
+  gap:10px;
+}
+
+.signUpForm,.logInForm{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  width:30%;
+  margin-left: 35%;
+  margin-top: 15vh;
+  text-align: center;
+}
+.logOutDiv{
+  display: flex;
+  flex-direction: row-reverse;
+  margin:1%;
+}
+
+.broadcast{
+  margin-top:15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logBtns{
+  display: flex;
+  margin:15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap:10px
+}
+
+.homepageLogo{
+    width: 80%;
+    height:60%;
+}
+
+.notFound{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
