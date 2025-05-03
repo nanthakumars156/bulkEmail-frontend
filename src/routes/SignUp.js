@@ -14,17 +14,17 @@ const PASSWORD_REGEX = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@!#%&]).{8,}$/g 
 const formValidationSchema = yup.object({
     username: yup.string()
                 .min(5,"Minimum length of username should be 5 chars")
-                .max(12,"Max length of username should be 12 chars")
+                .max(20,"Max length of username should be 20 chars")
                 .required("Mandatory field"),
     password : yup.string()
-                    .min(8,"Minimum length of password should be 5 chars")
+                    .min(8,"Minimum length of password should be 8 chars")
                     .max(12,"Max length of password should be 12 chars")
-                    .matches(PASSWORD_REGEX,'Password pattern did not match')
+                    .matches(PASSWORD_REGEX,'Password must be at least 8 characters long and include: 1 uppercase, 1 lowercase, 1 special character')
                     .required("Mandatory field"),
     confirmPassword: yup.string()
-                    .min(8,"Minimum length of password should be 5 chars")
+                    .min(8,"Minimum length of password should be 8 chars")
                     .max(12,"Max length of password should be 12 chars")
-                    .matches(PASSWORD_REGEX,'Password pattern did not match')
+                    .matches(PASSWORD_REGEX,'Password must be at least 8 characters long and include: 1 uppercase, 1 lowercase, 1 special character')
                     .required("Mandatory field")
                     .when("password",{
                         is:val => (val && val.length ? true : false),
