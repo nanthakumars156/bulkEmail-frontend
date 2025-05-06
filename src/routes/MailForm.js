@@ -115,7 +115,7 @@ function MailForm(){
                         onChange={handleChange}
                         label="To "
                         variant="outlined"
-                        placeholder='Enter emails seperated by comma'
+                        placeholder='Enter emails ie., xyz@gmail.com,abc@gmail.com'
                         onBlur={handleBlur}
                         style={new_style} 
                         error={errors.to && touched.to}
