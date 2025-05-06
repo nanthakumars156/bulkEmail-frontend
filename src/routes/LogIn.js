@@ -14,7 +14,7 @@ const formValidationSchema = yup.object({
                 .max(12,"Max length of username should be 12 chars")
                 .required("Mandatory field"),
     password : yup.string()
-                    .min(8,"Minimum length of password should be 5 chars")
+                    .min(8,"Minimum length of password should be 8 chars")
                     .max(12,"Max length of password should be 12 chars")
                     .matches(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@!#%&]).{8,}$/g,'Password pattern did not match')
                     .required("Mandatory field"),

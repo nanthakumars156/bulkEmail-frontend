@@ -19,8 +19,8 @@ const email_array_validation =  yup.array()
                                         })
                                     .of(yup.string()
                                         // .email(({ value }) => `${value} --> not a valid email; `)    // Instead of this default email checker ,email validator package is used 
-                                        .required("Mail is required")
-                                        .test("is-valid", (message) => `${message.value} is invalid  `, (value) => value ? isEmail(value) : new yup.ValidationError("Invalid value")),
+                                        .required("To enter multiple emails the format should be like this: xyz@gmail.com,abc@gmail.com")
+                                        .test("is-valid", (message) => `${message.value} To enter multiple emails the format should be like this: xyz@gmail.com,abc@gmail.com  `, (value) => value ? isEmail(value) : new yup.ValidationError("Invalid value")),
                                     )
                                   
                                     
@@ -34,7 +34,7 @@ const email_array_validation =  yup.array()
 // Yup Form validation
 const formValidationSchema = yup.object({
     name: yup.string().required("Mandatory Field").min(4,'Min 4 Chars').max(15,'Max 15 Chars'),
-    to:email_array_validation.required("Mandatory Field"),
+    to:email_array_validation.required("To enter multiple emails the format should be like this: xyz@gmail.com,abc@gmail.com"),
     cc:email_array_validation,
     bcc:email_array_validation,
     subject:yup.string().required("Mandatory Field").min(5,"Please tell us more 📝"),
