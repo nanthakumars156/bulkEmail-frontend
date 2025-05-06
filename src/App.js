@@ -7,8 +7,7 @@ import {LogIn} from './routes/LogIn';
 import {Homepage} from './routes/HomePage';
 import {Broadcast} from './routes/Broadcast';
 import { useEffect,useState } from 'react';
-
-
+import {Listing} from './routes/Listing';
 
 function App() {
   const history = useHistory();
@@ -38,6 +37,10 @@ function App() {
 
           <Route path="/broadcast">
             {token ? <Broadcast /> : <Redirect to ='/users/login' />}   {/* If token is not there it will direct to Login always */}         
+          </Route>
+
+          <Route path="/listing">
+            {token ? <Listing /> : <Redirect to ='/users/login' />}   {/* If token is not there it will direct to Login always */}         
           </Route>
 
           
