@@ -129,7 +129,7 @@ function MailForm(){
                         onChange={handleChange}
                         label="CC "
                         variant="outlined"
-                        placeholder='Emails seperated by comma'
+                        placeholder='Enter emails ie., xyz@gmail.com,abc@gmail.com'
                         onBlur={handleBlur}
                         style={{width: '35%'} } 
                         error={errors.cc && touched.cc}
@@ -142,7 +142,7 @@ function MailForm(){
                         onChange={handleChange}
                         label="BCC"
                         variant="outlined"
-                        placeholder='Emails seperated by comma'
+                        placeholder='Enter emails ie., xyz@gmail.com,abc@gmail.com'
                         onBlur={handleBlur}
                         style={{width: '35%'} }
                         error={errors.bcc && touched.bcc}
